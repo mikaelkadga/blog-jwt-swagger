@@ -41,6 +41,37 @@ userRouter.post("/user/registration", registrationValidationObject,
  *        description: Create user failed!
  */
 
+//get user
+userRouter.get("/user", userController.getUser)
+
+/**
+ * @swagger
+ * /user:
+ *  get:
+ *    tags:
+ *      - user
+ *    summary: API Get All User
+ *    responses:
+ *      '200':
+ *        description: 
+ *        content:
+ *          application/json:
+ *            schema:
+ *              type: object
+ *              properties:
+ *                fullname:
+ *                  type: string
+ *                  example: Nama Lengkap
+ *                email:
+ *                  type: string
+ *                  example: nama@gmail.com
+ *                password:
+ *                  type: string
+ *                  example: asdhjbahjsdfbashfbdf5asfkjh97632421312**%
+ *      '500':
+ *        description: 
+ */
+
 //edit user (private)
 userRouter.put("/user/:userId", tokenVerification, userController.editUser)
 

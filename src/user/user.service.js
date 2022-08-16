@@ -8,6 +8,10 @@ const createUser = async ({fullname, email, password}) => {
     })
 }
 
+const getUser = async () => {
+    return await userRepo.getUser()
+}
+
 const editUser = async ({id, fullname, email, password}) => {
     const hashPassword = await bcrypt.hash(password, 10)
     return await userRepo.editUser({id, fullname, email, password: hashPassword})
@@ -15,6 +19,7 @@ const editUser = async ({id, fullname, email, password}) => {
 
 const userService = {
     createUser,
+    getUser,
     editUser
 }
 

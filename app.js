@@ -10,6 +10,7 @@ const postRouter = require("./src/post/post.route");
 //body parser
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }))
+app.use(express.json())
 
 
 const swaggerUi = require("swagger-ui-express");

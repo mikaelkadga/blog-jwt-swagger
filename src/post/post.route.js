@@ -98,15 +98,15 @@ postRouter.post('/post', tokenVerification, createPostValidationObject,
  *          schema:
  *            type: object
  *            properties:
- *              fullname:
+ *              title:
  *                type: string
- *                example: Nama lengkap
- *              email:
+ *                example: Judul
+ *              body:
  *                type: string
- *                example: contoh@gmail.com
- *              password:
+ *                example: blalbalbalbalba blalbablabla
+ *              image:
  *                type: string
- *                example: Password@123!
+ *                example: gambar.jpg
  *    responses:
  *      '200':
  *        description: 

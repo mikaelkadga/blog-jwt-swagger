@@ -8,6 +8,10 @@ const createUser = async ({fullname, email, password}) => {
     })
 }
 
+const getUser = async () => {
+    return await User.findAll()
+}
+
 const editUser = async ({id, fullname, email, password}) => {
     return await User.update(
         {
@@ -24,6 +28,7 @@ const editUser = async ({id, fullname, email, password}) => {
 
 const userRepo = {
     createUser,
+    getUser,
     editUser
 }
 

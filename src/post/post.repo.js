@@ -29,7 +29,7 @@ const editPost = async({title, image, body, postId}) => {
 }
 
 const detailPost = async (postId) => {
-    return await Post.findAll({
+    return await Post.findOne({
         where: {
             id: postId
         }

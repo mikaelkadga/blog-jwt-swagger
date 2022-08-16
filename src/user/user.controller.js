@@ -10,6 +10,15 @@ const createUser = async (req, res) => {
     } 
 }
 
+const getUser = async (req, res) => {
+    try {
+        const allUser = await userService.getUser()
+        return res.status(200).json(allUser)
+    } catch (error) {
+        return res.status(500).json({ message: "get user failed!" });
+    }
+}
+
 const editUser = async (req, res) => {
     try {
         const {userId} = req.params
@@ -28,6 +37,7 @@ const editUser = async (req, res) => {
 
 const userController = {
     createUser,
+    getUser,
     editUser
 }
 
