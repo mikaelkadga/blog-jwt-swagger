@@ -22,17 +22,19 @@ postRouter.get('/posts', postController.getAllPost);
  *        content:
  *          application/json:
  *            schema:
- *              type: object
- *              properties:
- *                title:
- *                  type: string
- *                  example: Judul
- *                body:
- *                  type: string
- *                  example: blablablablablablabla
- *                image:
- *                  type: string
- *                  example: image.jpg
+ *              type: array
+ *              items: 
+ *                  type: object
+ *                  properties:
+ *                      title:
+ *                        type: string
+ *                        example: Judul
+ *                      body:
+ *                        type: string
+ *                        example: blablablablablablabla
+ *                      image:
+ *                        type: string
+ *                        example: image.jpg
  *      '500':
  *        description: 
  */
@@ -59,17 +61,19 @@ postRouter.get('/post', tokenVerification, postController.getWriterPost);
  *        content:
  *          application/json:
  *            schema:
- *              type: object
- *              properties:
- *                title:
- *                  type: string
- *                  example: Judul
- *                body:
- *                  type: string
- *                  example: blablablablablablabla
- *                image:
- *                  type: string
- *                  example: image.jpg
+ *              type: array
+ *              items:
+ *                  type: object
+ *                  properties:
+ *                    title:
+ *                      type: string
+ *                      example: Judul
+ *                    body:
+ *                      type: string
+ *                      example: blablablablablablabla
+ *                    image:
+ *                      type: string
+ *                      example: image.jpg
  *      '500':
  *        description: 
  */

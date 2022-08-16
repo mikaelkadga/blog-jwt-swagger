@@ -57,17 +57,19 @@ userRouter.get("/user", userController.getUser)
  *        content:
  *          application/json:
  *            schema:
- *              type: object
- *              properties:
- *                fullname:
- *                  type: string
- *                  example: Nama Lengkap
- *                email:
- *                  type: string
- *                  example: nama@gmail.com
- *                password:
- *                  type: string
- *                  example: asdhjbahjsdfbashfbdf5asfkjh97632421312**%
+ *              type: array
+ *              items:
+ *                  type: object
+ *                  properties:
+ *                    fullname:
+ *                      type: string
+ *                      example: Nama Lengkap
+ *                    email:
+ *                      type: string
+ *                      example: nama@gmail.com
+ *                    password:
+ *                      type: string
+ *                      example: asdhjbahjsdfbashfbdf5asfkjh97632421312**%
  *      '500':
  *        description: 
  */
