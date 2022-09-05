@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+var cors = require('cors')
+const port = 8000;
  
 
 const userRouter = require("./src/user/user.route");
@@ -15,6 +16,8 @@ app.use(express.json())
 
 const swaggerUi = require("swagger-ui-express");
 const swaggerDoc = require("./src/config/swagger");
+
+app.use(cors())
 
 app.get("/", (req, res) => {
     res.send("hi")

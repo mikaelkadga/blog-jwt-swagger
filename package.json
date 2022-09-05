@@ -23,6 +23,7 @@
     "swagger-ui-express": "^4.5.0"
   },
   "devDependencies": {
+    "cors": "^2.8.5",
     "sequelize-cli": "^6.4.1"
   }
 }
