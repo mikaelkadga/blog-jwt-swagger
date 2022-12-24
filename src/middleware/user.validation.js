@@ -1,7 +1,7 @@
 const { body } = require("express-validator");
 
 // const registrationValidationObject = {
-//   fullname: {
+//   fullName: {
 //     in: ["body"],
 //     isString: true,
 //   },
@@ -16,7 +16,7 @@ const { body } = require("express-validator");
 // };
 
 const registrationValidationObject = [
-  body("fullname").isString().notEmpty(),
+  body("fullName").isString().notEmpty(),
   body("email").isEmail().notEmpty(),
   body("password").isStrongPassword().notEmpty(),
 ];

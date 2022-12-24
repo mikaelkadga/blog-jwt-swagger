@@ -159,7 +159,7 @@ postRouter.put('/post/:postId', tokenVerification, createPostValidationObject,
  *          schema:
  *            type: object
  *            properties:
- *              fullname:
+ *              fullName:
  *                type: string
  *                example: Nama lengkap
  *              email:
@@ -248,7 +248,7 @@ postRouter.delete('/post/:postId', tokenVerification, postController.deletePost)
  *          schema:
  *            type: object
  *            properties:
- *              fullname:
+ *              fullName:
  *                type: string
  *                example: Nama lengkap
  *              email:

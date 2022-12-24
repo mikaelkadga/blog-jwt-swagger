@@ -25,7 +25,7 @@ userRouter.post("/user/registration", registrationValidationObject,
  *          schema:
  *            type: object
  *            properties:
- *              fullname:
+ *              fullName:
  *                type: string
  *                example: Contoh Nama
  *              email:
@@ -61,7 +61,7 @@ userRouter.get("/user", userController.getUser)
  *              items:
  *                  type: object
  *                  properties:
- *                    fullname:
+ *                    fullName:
  *                      type: string
  *                      example: Nama Lengkap
  *                    email:
@@ -97,7 +97,7 @@ userRouter.put("/user/:userId", tokenVerification, userController.editUser)
  *          schema:
  *            type: object
  *            properties:
- *              fullname:
+ *              fullName:
  *                type: string
  *                example: Nama lengkap
  *              email:

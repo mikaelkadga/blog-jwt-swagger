@@ -18,7 +18,7 @@ const login = async (req, res) => {
       const token = await jwt.sign(
         {
           id: existUser.id,
-          fullname: existUser.fullname,
+          fullName: existUser.fullName,
           email: existUser.email
         },
         process.env.JWT_SECRET_KEY,

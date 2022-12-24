@@ -1,8 +1,8 @@
 const {User} = require("../database/models")
 
-const createUser = async ({fullname, email, password}) => {
+const createUser = async ({fullName, email, password}) => {
     return await User.create({
-        fullname,
+        fullName,
         email,
         password
     })
@@ -12,10 +12,10 @@ const getUser = async () => {
     return await User.findAll()
 }
 
-const editUser = async ({id, fullname, email, password}) => {
+const editUser = async ({id, fullName, email, password}) => {
     return await User.update(
         {
-        fullname, email, password
+        fullName, email, password
         },
         {
             where: {
